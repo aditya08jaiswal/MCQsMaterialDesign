@@ -23,6 +23,7 @@
         android:background="@color/colorBack"
         android:contentDescription="@string/question"
         android:src="@drawable/que_back"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@+id/mcq_back_optionA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,7 +249,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/left_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/no_bookmark_icon" />
 
 
 </android.support.constraint.ConstraintLayout>
