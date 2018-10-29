@@ -177,7 +177,6 @@
         android:src="@drawable/explain_back"
         app:layout_constraintBottom_toTopOf="@+id/left_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explanation_head" />
 
