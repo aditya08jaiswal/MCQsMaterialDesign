@@ -10,7 +10,7 @@
         android:color="#2979FF" />
 
     <size
-        android:width="360dp"
+        android:width="300dp"
         android:height="48dp" />
 
     <!--Use android:dashWidth="2dp" and android:dashGap="2dp"
