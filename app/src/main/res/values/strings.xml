@@ -5,7 +5,9 @@
     <string name="item2">Item 2</string>
     <string name="item3">Item 3</string>
 
-    <string name="question">MCQ Question</string>
+    <string name="question">
+        MCQ Question. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    </string>
 
     <string name="optionA">Option A</string>
     <string name="optionB">Option B</string>

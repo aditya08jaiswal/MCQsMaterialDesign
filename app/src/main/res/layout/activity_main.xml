@@ -1,13 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!--CUSTOM APPBAR -->
+
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/my_toolbar"
         layout="@layout/toolbar" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <!-- QUESTION -->
+
+    <ImageView
+        android:id="@+id/question_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBack"
+        android:contentDescription="@string/question"
+        android:src="@drawable/que_back"
+        app:layout_constraintBottom_toTopOf="@+id/mcq_back_optionA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+    <TextView
+        android:id="@+id/text_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/question"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/question_back"
+        app:layout_constraintEnd_toEndOf="@id/question_back"
+        app:layout_constraintStart_toStartOf="@id/question_back"
+        app:layout_constraintTop_toTopOf="@id/question_back" />
+
+
+    <!-- OPTION A -->
+
+    <ImageView
+        android:id="@+id/mcq_back_optionA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/optionA"
+        android:src="@drawable/mcq_box_gen"
+        android:text="@string/optionA"
+        app:layout_constraintBottom_toTopOf="@+id/mcq_back_optionB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_back" />
+
+    <TextView
+        android:id="@+id/text_optionA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/optionA"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/mcq_back_optionA"
+        app:layout_constraintEnd_toEndOf="@+id/mcq_back_optionA"
+        app:layout_constraintStart_toStartOf="@+id/mcq_back_optionA"
+        app:layout_constraintTop_toTopOf="@+id/mcq_back_optionA" />
+
+
+    <!-- OPTION B -->
+
+    <ImageView
+        android:id="@+id/mcq_back_optionB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/optionB"
+        android:src="@drawable/mcq_box_gen"
+        android:text="@string/optionB"
+        app:layout_constraintBottom_toTopOf="@+id/mcq_back_optionC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcq_back_optionA" />
+
+    <TextView
+        android:id="@+id/text_optionB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/optionB"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/mcq_back_optionB"
+        app:layout_constraintEnd_toEndOf="@+id/mcq_back_optionB"
+        app:layout_constraintStart_toStartOf="@+id/mcq_back_optionB"
+        app:layout_constraintTop_toTopOf="@+id/mcq_back_optionB" />
+
+
+    <!-- OPTION C -->
+
+    <ImageView
+        android:id="@+id/mcq_back_optionC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/optionC"
+        android:src="@drawable/mcq_box_gen"
+        android:text="@string/optionC"
+        app:layout_constraintBottom_toTopOf="@+id/mcq_back_optionD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcq_back_optionB" />
+
+    <TextView
+        android:id="@+id/text_optionC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/optionC"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/mcq_back_optionC"
+        app:layout_constraintEnd_toEndOf="@+id/mcq_back_optionC"
+        app:layout_constraintStart_toStartOf="@+id/mcq_back_optionC"
+        app:layout_constraintTop_toTopOf="@+id/mcq_back_optionC" />
+
+    <!-- OPTION D -->
+
+    <ImageView
+        android:id="@+id/mcq_back_optionD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/optionD"
+        android:src="@drawable/mcq_box_gen"
+        android:text="@string/optionD"
+        app:layout_constraintBottom_toTopOf="@+id/explanation_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcq_back_optionC" />
+
+    <TextView
+        android:id="@+id/text_optionD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/optionD"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/mcq_back_optionD"
+        app:layout_constraintEnd_toEndOf="@+id/mcq_back_optionD"
+        app:layout_constraintStart_toStartOf="@+id/mcq_back_optionD"
+        app:layout_constraintTop_toTopOf="@+id/mcq_back_optionD" />
+
+
+    <!-- EXPLANATION TEXT -->
+
+    <TextView
+        android:id="@+id/explanation_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/explanation_head"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/explain_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mcq_back_optionD" />
+
+
+    <!-- EXPLANATION -->
+
+    <ImageView
+        android:id="@+id/explain_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBack"
+        android:contentDescription="@string/explanation"
+        android:src="@drawable/explain_back"
+        app:layout_constraintBottom_toTopOf="@+id/left_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explanation_head" />
+
+    <TextView
+        android:id="@+id/text_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/explanation"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/explain_back"
+        app:layout_constraintEnd_toEndOf="@id/explain_back"
+        app:layout_constraintStart_toStartOf="@id/explain_back"
+        app:layout_constraintTop_toTopOf="@id/explain_back" />
+
+
+    <!-- ICONS -->
+
+
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/left_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toStartOf="@+id/no_bookmark_icon"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explain_back" />
+
+
+    <ImageView
+        android:id="@+id/no_bookmark_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/no_bookmark"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toStartOf="@+id/right_icon"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/left_icon"
+        app:layout_constraintTop_toBottomOf="@+id/explain_back" />
+
+
+    <ImageView
+        android:id="@+id/right_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/right_icon"
+        app:layout_constraintBottom_toTopOf="@+id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/no_bookmark_icon"
+        app:layout_constraintTop_toBottomOf="@+id/explain_back" />
+
+
+    <!-- LOWER PART -->
+
+    <ImageView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/lower_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/left_icon" />
+
+
+</android.support.constraint.ConstraintLayout>

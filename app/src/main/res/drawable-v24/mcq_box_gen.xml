@@ -10,8 +10,8 @@
         android:color="#2979FF" />
 
     <size
-        android:width="250dp"
-        android:height="40dp" />
+        android:width="360dp"
+        android:height="48dp" />
 
     <!--Use android:dashWidth="2dp" and android:dashGap="2dp"
     to add dashes to your stroke-->
